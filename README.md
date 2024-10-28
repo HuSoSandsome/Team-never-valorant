@@ -1,5 +1,6 @@
 # ---
 1.数据准备
+
 将省赛数据集解压放入data文件夹下，对于测试集A修改名称为test_A_joint.npy标签数据改为test_A_label.npy，对于测试集B修改名称为test_B_joint.npy
 最终得到如下所展示的目录结构与文件
 Your data/ should be like this:
