@@ -1,0 +1,59 @@
+# command line: main_logit_adjust.py --config ./config/match/test_joint_B.yaml
+
+base_lr: 0.01
+batch_size: 256
+cb_loss: false
+confidence_dir: ./work_dir/match/confidence_B
+config: ./config/match/test_joint_B.yaml
+device:
+- 0
+- 1
+- 2
+- 3
+eval_interval: 5
+feeder: feeders.feeder_B.Feeder
+ignore_weights: []
+log_interval: 100
+lr_decay_rate: 0.1
+model: model.ctrgcn.Model
+model_args:
+  graph: graph.uav_human.Graph
+  graph_args:
+    labeling_mode: spatial
+  num_class: 155
+  num_person: 2
+  num_point: 17
+model_saved_name: ''
+nesterov: false
+num_epoch: 80
+num_worker: 32
+optimizer: SGD
+phase: eval_B
+print_log: true
+save_epoch: 30
+save_interval: 1
+save_score: false
+seed: 1
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 20
+- 40
+- 60
+test_batch_size: 128
+test_feeder_args:
+  bone: true
+  data_path: ./data/match/test_joint_B.npy
+  debug: false
+  normalization: true
+  p_interval:
+  - 0.95
+  vel: false
+  window_size: 120
+train_feeder_args: {}
+warm_up_epoch: 0
+weight_decay: 0.0005
+weights: ./work_dir/match/ctrgcn_longtail/runs-best-40-10240.pt
+work_dir: ./work_dir/match/ctrgcn_longtail
