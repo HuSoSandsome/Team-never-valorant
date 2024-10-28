@@ -1,0 +1,1 @@
+[ Wed Oct 23 23:19:49 2024 ] using warm up, epoch: 5
