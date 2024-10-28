@@ -11,8 +11,8 @@ train_feeder_args:
   normalization: False
 
 test_feeder_args:
-  data_path: ./data/match/test_joint.npy
-  label_path: ./data/match/test_label.npy
+  data_path: ./data/match/test_A_joint.npy
+  label_path: ./data/match/test_A_label.npy
   debug: False
 
 
