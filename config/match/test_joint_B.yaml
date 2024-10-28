@@ -4,7 +4,7 @@ confidence_dir: ./work_dir/match/confidence_B
 # feeder
 feeder: feeders.feeder_B.Feeder
 test_feeder_args:
-  data_path: ./data/match/test_joint_B.npy
+  data_path: ./data/match/test_B_joint.npy
   window_size: 120
   p_interval: [0.95]
   vel: False
